@@ -12,3 +12,11 @@ class GbParseItem(scrapy.Item):
     pass
 
 
+class GbAutoYoulaItem(scrapy.Item):
+    url = scrapy.Field()
+    title = scrapy.Field()
+    price = scrapy.Field()
+    photos = scrapy.Field()
+    characteristics = scrapy.Field()
+    descriptions = scrapy.Field()
+    author = scrapy.Field()
