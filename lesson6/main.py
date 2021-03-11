@@ -2,13 +2,13 @@ import os
 import dotenv
 from scrapy.crawler import CrawlerProcess
 from scrapy.settings import Settings
-from gb_parse.spiders.autoyoula import AutoyoulaSpider
-from gb_parse.spiders.hh import HhSpider
+#from gb_parse.spiders.autoyoula import AutoyoulaSpider
+#from gb_parse.spiders.hh import HhSpider
 from gb_parse.spiders.instagram import InstagramSpider
 
 
 if __name__ == "__main__":
-    dotenv.load_dotenv(".env")
+    dotenv.load_dotenv(dotenv_path='F:\\Обучение\\4 Методы сбора и обработки данных из сети Интернет\\4-Internet-data-processing\\venv\\.env')
     crawler_settings = Settings()
     tags = ["python"]
     crawler_settings.setmodule("gb_parse.settings")

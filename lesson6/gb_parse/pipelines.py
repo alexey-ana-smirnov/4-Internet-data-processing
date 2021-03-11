@@ -30,6 +30,9 @@ class GbImageDownloadPipeline(ImagesPipeline):
     def get_media_requests(self, item, info):
         for url in item.get("photos", []):
             yield Request(url)
+        image = item["data"].get("profile_pic_url") or item["data"].get("display_url")
+        if image:
+            yield Request(image)
 
     def item_completed(self, results, item, info):
         if results:
